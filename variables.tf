@@ -33,7 +33,7 @@ variable "host_name" {
 variable "security_group_ids" {
   type        = "list"
   default     = []
-  description = "he IDs of the security groups from which to allow `ingress` traffic to the DB instance"
+  description = "The IDs of the security groups from which to allow `ingress` traffic to the DB instance"
 }
 
 variable "database_name" {
@@ -224,4 +224,10 @@ variable "parameter_group_name" {
   type        = "string"
   description = "Name of the DB parameter group to associate"
   default     = ""
+}
+
+variable "enabled_cloudwatch_logs_exports" {
+  type        = "list"
+  default     = []
+  description = "List of log types to enable for exporting to CloudWatch logs"
 }
